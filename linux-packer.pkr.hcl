@@ -40,8 +40,7 @@ locals { timestamp = regex_replace(timestamp(), "[- TZ:]", "") }
     name = "CICDplsWork"
     sources = ["amazon-ebs.packer-ansible-Z"]
 
-    provisioner {
-        type = "ansible"
+    provisioner "ansible" {
         playbook_file = "./playbook.yml"
     }
  }
