@@ -20,7 +20,7 @@ jobs:
         run: packer --version
 
       - name: Packer init
-        run: find . -maxdepth 1 -name '*.hcl' -print0 | xargs -t0n1 packer init 
+        run: find . -maxdepth 1 -name '*.hcl' -print0 | xargs -t0n1 packer init -upgrade
 
       - name: Packer Validate
         run: find . -maxdepth 1 -name '*.hcl' -print0 | xargs -t0n1 packer validate
