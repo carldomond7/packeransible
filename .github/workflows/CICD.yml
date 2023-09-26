@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Packer install
-        uses: hashicorp/setup-packer@v1
+        uses: hashicorp/setup-packer@main
         with:
           version: '1.9.4'
 
