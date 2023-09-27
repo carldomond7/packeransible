@@ -10,7 +10,7 @@ packer {
 
 #Initializing region variable
 variable "region" {
-    type = "string"
+    type = string
     default = "us-east-2"
 }
 
@@ -20,7 +20,7 @@ locals { timestamp = regex_replace(timestamp(), "[- TZ:]", "") }
 
  #Creating base image for template, in AWS we are going to search for an AMI that meets our filtered requirements
  source "amazon-ebs" "packer-windows-Z" {
-    ami_name = "Hopefully,this,CICD,pipeline,Works-${local.timestamp}"
+    ami_name = "HopefullythisCICDpipelineWorks-${local.timestamp}"
     communicator = "winrm"
     instance_type = "t2.micro"
     region = "${var.region}"
