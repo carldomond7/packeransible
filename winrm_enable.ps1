@@ -11,7 +11,7 @@ if ($win_rm -eq $null)
 
     Set-Service -Name "WinRM" -StartupType Automatic
     Start-Service -Name "WinRM"
-
+}
     Write-Host -ForegroundColor Green "WinRM has been succesfully installed"
 } elseif ($win_rm.Status -eq "Running") {
     #Winrm is already configured
