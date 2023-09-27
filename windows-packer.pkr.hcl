@@ -43,6 +43,6 @@ locals { timestamp = regex_replace(timestamp(), "[- TZ:]", "") }
     sources = ["amazon-ebs.packer-windows-Z"]
 
     provisioner "powershell" {
-        script = "./pokemontest.ps1"
+        script = "./winrm_enable.ps1"
     }
  }
