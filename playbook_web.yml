@@ -18,7 +18,8 @@
     - name: Configure firewall to allow HTTP traffic (HTTP is port 80)
       ufw: 
         rule: allow
-        port: 80/tcp
+        port: 80
+        proto: tcp
         state: enabled
     
       #Add task to test default configuration of apache
