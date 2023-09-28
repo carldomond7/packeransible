@@ -49,6 +49,6 @@ locals { timestamp = regex_replace(timestamp(), "[- TZ:]", "") }
     sources = ["amazon-ebs.packer-ansible-Z"]
 
     provisioner "ansible" {
-        playbook_file = "./playbook.yml"
+        playbook_file = "./playbook_web.yml"
     }
  }
